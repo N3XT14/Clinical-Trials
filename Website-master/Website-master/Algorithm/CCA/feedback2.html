@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trial Filter</title>	
+	<script type="text/javascript"> 
+		var data;
+        var issue;
+        var adult=0;
+        var child=0;
+        var old=0;
+		var xhttp = new XMLHttpRequest();
+		xhttp.open("GET", "feedback3.json", true);
+  		xhttp.onload = function() {
+    	if (this.readyState == 4 && this.status == 200) {
+     			data = JSON.parse(this.responseText);				   		    			                
+    			
+    		}
+    	};
+    	xhttp.send();
+
+        var lab = new XMLHttpRequest();
+        lab.open("GET", "lab.json", true);
+        lab.onload = function() {
+        if (this.readyState == 4 && this.status == 200) {
+                labdata = JSON.parse(this.responseText);                                                       
+                exclude(labdata,data);
+            }
+        }
+        lab.send();
+
+               function exclude(labdata,data){
+                trial=labdata[0];
+                issue=[];
+                noissue=[];
+                better=[];
+                tmax=10;
+                tmin=7;                
+                
+                for (var i = 0; i < data.length; i++)   {                    
+                    var score=data[i%11].effect_weight;
+                     
+                    for (var j = 0; j < Object.keys(trial).length; j++) {                                            
+                       
+                        if(trial[(Object.keys(trial))[j]]=="0"){
+                            if(data[i].side_effect[0][(Object.keys(trial))[j]]=="1"){                               
+                                score-=0.5;
+                            }
+                            else{                                       
+                                score+=0.5;
+                            }
+                        }
+                        else{
+                            if(data[i].side_effect[0][(Object.keys(trial))[j]]=="1")
+                            {
+                                score+=0.5;
+                            }                            
+                            else
+                            {              
+                                score+=1;
+                            }
+                        }
+                        
+                    }
+                    data[i%11].effect_weight=score;
+                    console.log(data[0].effect_weight);               
+    
+                }
+                for (var i = 0; i < data.length/3; i++) {
+                    console.log(data[i].effect_weight)
+                    if(data[i%11].effect_weight/3<=tmin){
+                        issue.push(i);
+                    }
+                    else if(data[i%11].effect_weight/3>=tmax){
+                        better.push(i);
+                    }
+                    else{
+                        noissue.push(i);
+                    }
+                 }
+                 console.log(issue);
+                 console.log(noissue);
+                 console.log(better);
+                issue_count={};
+                 console.log(Object.keys(trial).length);
+                for (var j = 0; j < Object.keys(trial).length; j++) {                    
+                    if((trial[(Object.keys(trial))[j]])=="0"){                        
+                        issue_count[(Object.keys(trial))[j]]=0;
+                        for (var i = 0; i < issue.length; i++) {
+                            if((data[issue[i]].side_effect[0][(Object.keys(trial))[j]])=="1"){
+                                issue_count[(Object.keys(trial))[j]]+=1;
+                            }
+                        }
+                    }
+                }
+                console.log(issue_count);                   
+                disease(issue);
+                for (var i = 0; i < Object.keys(issue).length; i++) {
+                    if(data[issue[i]].side_effect[0]["insomnia"]=="1"){
+                        console.log((data[issue[i]]).side_effect[0]["insomnia"]);
+                        /*array.push(data[issue[i]].age);*/
+                        if(data[issue[i]].age=="child"){
+                            child+=1;
+                        }
+                        else if(data[issue[i]].age=="adult"){
+                            adult+=1;
+                        }
+                        else{
+                            old+=1;
+                        }
+                    }
+                }
+                bar(old,adult,child);
+                /*console.log("array");
+                console.log(array);*/
+            }          
+           function disease(issue) {
+               console.log(issue);
+               for (var i = 0; i < issue.length; i++) {
+                    console.log(issue.length);
+
+               }
+           }
+            
+        function bar(child,adult,old) {
+
+                console.log(child);
+                console.log(adult);
+var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Age Group"
+    },
+    axisY: {
+        title: "INSOMNIA (in percentage)"
+    },
+    data: [{        
+        type: "column",  
+        showInLegend: true, 
+        legendMarkerColor: "black",
+        dataPoints: [      
+            { y: child, label: "CHILD" },
+            { y: adult,  label: "ADULT" },
+            { y: old,  label: "OLD" }
+        ]
+    }]
+});
+chart.render();
+
+}
+</script>                      
+	</script>
+		
+<</head>
+<body>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

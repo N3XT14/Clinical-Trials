@@ -1,0 +1,178 @@
+[
+  {
+    "age": "adult",
+    "sex": "m",
+    "alcoholic": "1",
+    "tobacco": "0",
+    "bg": "o",    
+    "thyroid": "0",
+    "diabetes": "1",
+    "bp":"1",
+    "cardiology": "1"
+  },
+  {
+    "age": "adult",
+    "sex": "f",
+    "alcoholic": "0",
+    "tobacco": "1",
+    "bg": "a",      
+    "thyroid": "1",
+    "diabetes": "0",
+    "bp":"1",
+    "cardiology": "0"
+  },
+  {
+    "age": "adult",
+    "sex": "m",
+    "alcoholic": "1",
+    "tobacco": "1",
+    "bg": "a",
+    "thyroid": "1",
+    "diabetes": "0",
+    "bp":"1",
+    "cardiology": "1"
+  },
+  {
+    "age": "adult",
+    "sex": "m",
+     "alcoholic": "0",
+    "tobacco": "0",
+    "bg": "b",
+    "thyroid": "0",
+    "diabetes": "1",
+    "bp":"1",
+    "cardiology": "0"
+  },
+  {
+    "age": "old",
+    "sex": "m",
+    "alcoholic": "1",
+    "tobacco": "0",
+    "bg": "b",
+    "thyroid": "0",
+    "diabetes": "1",
+    "bp":"1",
+    "cardiology": "1"
+  },
+  {
+    "age": "old",
+    "sex": "f",
+    "alcoholic": "0",
+    "tobacco": "0",
+    "bg": "a",
+    "thyroid": "1",
+    "diabetes": "0",
+    "bp":"1",
+    "cardiology": "0"
+  },
+  {
+    "age": "old",
+    "sex": "f",
+    "alcoholic": "0",
+    "tobacco": "1",
+    "bg": "a",
+    "thyroid": "1",
+    "diabetes": "1",
+    "bp":"1",
+    "cardiology": "0"
+  },
+  {
+    "age": "adult",
+    "sex": "m",    
+     "alcoholic": "0",
+    "tobacco": "1",
+    "bg": "b",
+    "thyroid": "1",
+    "diabetes": "1",
+    "bp":"1",
+    "cardiology": "0"
+  },
+  {
+    "age": "child",
+    "sex": "m",    
+    "alcoholic": "1",
+    "tobacco": "0",
+    "bg": "a",
+    "thyroid": "0",
+    "diabetes": "0",
+    "bp":"0",
+    "cardiology": "1"
+  },
+  {
+    "age": "child",
+    "sex": "f",
+     "alcoholic": "0",
+    "tobacco": "0",
+    "bg": "o",
+    "thyroid": "0",
+    "diabetes": "0",
+    "bp":"0",
+    "cardiology": "0"
+  },
+  {
+    "age": "child",
+    "sex": "m",
+    "alcoholic": "0",
+    "tobacco": "0",
+    "bg": "o",
+    "thyroid": "0",
+    "diabetes": "0",
+    "bp":"0",
+    "cardiology": "0"
+  },
+  {
+    "age": "child",
+    "sex": "f",
+    "alcoholic": "0",
+    "tobacco": "0",    
+    "bg": "b",    
+    "thyroid": "0",
+    "diabetes": "0",
+    "bp":"1",
+    "cardiology": "0"
+  },
+   {
+    "age": "child",
+    "sex": "f",
+    "alcoholic": "0",
+    "tobacco": "0",
+    "bg": "b",    
+    "thyroid": "1",
+    "diabetes": "0",
+    "bp":"0",
+    "cardiology": "0"
+  },
+   {
+    "age": "old",
+    "sex": "f",
+    "alcoholic": "0",
+    "tobacco": "1",
+    "bg": "o",
+    "thyroid": "1",
+    "diabetes": "0",
+    "bp":"1",
+    "cardiology": "0"
+  },
+   {
+    "age": "old",
+    "sex": "m",
+    "alcoholic": "1",
+    "tobacco": "1",
+    "bg": "a",
+    "thyroid": "0",
+    "diabetes": "1",
+    "bp":"1",
+    "cardiology": "1"
+  },
+   {
+    "age": "old",
+    "sex": "f",
+    "alcoholic": "1",
+    "tobacco": "0",
+    "bg": "a",
+    "thyroid": "0",
+    "diabetes": "0",
+    "bp":"1",
+    "cardiology": "1"
+  }
+]

@@ -1,0 +1,33 @@
+
+
+/*#trialinfo div
+{
+width: 300px;padding: 8px;margin: 8px;float: left;display:inline-block;float:left;
+}
+
+	.w3-dropdown-hover .w3-button
+	{
+		width: 100%;
+	}*/
+
+#yes
+{
+	background-color: #1a64ec;
+}
+#yes button
+{
+	margin: 10px;
+	padding: 2px 8px;
+	border-radius: 5px;
+	background-color: #134bb1;
+	color: #fff8f5;
+}
+#no div
+{
+	display: inline-block;
+	margin: 10px;
+	padding: 5px;
+	border-radius: 20px;
+	border: 1px solid black;
+	box-shadow: 5px 5px;
+}

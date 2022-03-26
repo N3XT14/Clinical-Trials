@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trial Filter</title>	
+	<script type="text/javascript"> 
+		var data;
+		var xhttp = new XMLHttpRequest();
+		xhttp.open("GET", "trials.json", true);
+  		xhttp.onreadystatechange = function() {
+    	if (this.readyState == 4 && this.status == 200) {
+     			data = JSON.parse(this.responseText);				   		
+    		}
+    	};
+    	xhttp.send();
+      console.log()
+    	 var patient = new XMLHttpRequest();
+		patient.open("GET", "patient.json", true);
+
+  		patient.onreadystatechange = function() {
+    	if (this.readyState == 4 && this.status == 200) {
+     			var pat = JSON.parse(this.responseText);
+				filter1(data,pat);     			
+    		}
+    	};
+    	patient.send();
+    	function filter1(data,pat) {
+    		var patient = pat[0];
+    		var trials = [];
+    		for (var i = 0; i < data.length; i++) {
+    			var disease = data[i]['purpose'];    			
+    			if (patient[disease]=="1" && patient.age==data[i].age) {
+    				  trials.push(data[i]);
+            }
+    			}            
+          sort(trials);     		
+    		} 	
+
+        function sort(trials) {
+          console.log(trials);
+          for (var i = 0; i < trials.length; i++) {
+            var a = 0.1;
+            var b = 0.07;
+            var c = 0.05;
+            trials[i].preference=trials[i].patient_no*a+trials[i].trial_no*b+trials[i].success_rate*c;            
+          }
+          trials = preferencesort(trials);          
+          console.log(trials);
+        }
+
+        function preferencesort(trial){
+          for (var i = 0; i < trial.length-1; i++) {
+            for (var j = i+1; j < trial.length; j++) {          
+              if (trial[j].preference<trial[i].preference) {
+                var temp = trial[i];
+                trial[i]=trial[j];
+                trial[j]=temp;
+              } 
+            }
+          }          
+          return trial;
+        }
+      
+	</script>
+		
+</head>
+<body>
+	<div></div>
+</body>
+</html>

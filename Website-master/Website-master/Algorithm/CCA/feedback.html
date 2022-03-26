@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trial Filter</title>	
+	<script type="text/javascript"> 
+		var data;
+        var issue;
+		var xhttp = new XMLHttpRequest();
+		xhttp.open("GET", "feedback3.json", true);
+  		xhttp.onload = function() {
+    	if (this.readyState == 4 && this.status == 200) {
+     			data = JSON.parse(this.responseText);				   		    			                
+    			
+    		}
+    	};
+    	xhttp.send();
+
+        var lab = new XMLHttpRequest();
+        lab.open("GET", "lab.json", true);
+        lab.onload = function() {
+        if (this.readyState == 4 && this.status == 200) {
+                labdata = JSON.parse(this.responseText);                                                       
+                exclude(labdata,data);
+            }
+        }
+        lab.send();
+
+               function exclude(labdata,data){
+                trial=labdata[0];
+                issue=[];
+                noissue=[];
+                better=[];
+                tmax=10;
+                tmin=7;                
+                
+                for (var i = 0; i < data.length; i++)   {                    
+                    var score=data[i%11].effect_weight;
+                     
+                    for (var j = 0; j < Object.keys(trial).length; j++) {                                            
+                       
+                        if(trial[(Object.keys(trial))[j]]=="0"){
+                            if(data[i].side_effect[0][(Object.keys(trial))[j]]=="1"){                               
+                                score-=0.5;
+                            }
+                            else{                                       
+                                score+=0.5;
+                            }
+                        }
+                        else{
+                            if(data[i].side_effect[0][(Object.keys(trial))[j]]=="1")
+                            {
+                                score+=0.5;
+                            }                            
+                            else
+                            {              
+                                score+=1;
+                            }
+                        }
+                        
+                    }
+                    data[i%11].effect_weight=score;
+                    console.log(data[0].effect_weight);               
+    
+                }
+                for (var i = 0; i < data.length/3; i++) {
+                    console.log(data[i].effect_weight)
+                    if(data[i%11].effect_weight/3<=tmin){
+                        issue.push(i);
+                    }
+                    else if(data[i%11].effect_weight/3>=tmax){
+                        better.push(i);
+                    }
+                    else{
+                        noissue.push(i);
+                    }
+                 }
+                 console.log(issue);
+                 console.log(noissue);
+                 console.log(better);
+                issue_count={};
+                 console.log(Object.keys(trial).length);
+                for (var j = 0; j < Object.keys(trial).length; j++) {                    
+                    if((trial[(Object.keys(trial))[j]])=="0"){                        
+                        issue_count[(Object.keys(trial))[j]]=0;
+                        for (var i = 0; i < issue.length; i++) {
+                            if((data[issue[i]].side_effect[0][(Object.keys(trial))[j]])=="1"){
+                                issue_count[(Object.keys(trial))[j]]+=1;
+                            }
+                        }
+                    }
+                }
+                console.log(issue_count);                   
+                disease(issue);
+            }          
+           function disease(issue) {
+               console.log(issue);
+               for (var i = 0; i < issue.length; i++) {
+                    console.log(issue.length);
+
+               }
+           }
+            
+            window.onload = function(){
+
+                var chart = new CanvasJS.Chart("chart", {
+                    animationEnabled: true,
+                    title: {
+                            text: "Clutering of effects based on the score defined by the algorithm"
+                    },      
+                data: [{
+                    type: "pie",
+                    startAngle: 240,
+                    yValueFormatString: "#,##0.##",
+                    indexLabel: "{label} {y}",
+                    dataPoints: [
+                        {y: 6, label: "Insomnia"},
+                        {y: 4, label: "Constipation"},
+                        {y: 8, label: "Fever"},
+                        {y: 9, label: "Anxiety"}                        
+                    ]
+                }]
+            });
+            chart.render();
+            }                             
+	</script>
+		
+</head>
+<body>
+	<div id="chart" style="height: 300px; width: 100%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
