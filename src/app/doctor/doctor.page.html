@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-toolbar text-center>
+    <ion-title color="light">DOCTOR REGISTRATION</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">FULL NAME</ion-label>
+    <ion-input type="text" color="light" [(ngModel)]="fullname"></ion-input>
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-label color="light">DATE OF BIRTH</ion-label>
+    <ion-datetime value="2000-01-01" displayFormat="YYYY MMM DD" [(ngModel)]="dob"></ion-datetime>
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-radio-group [(ngModel)]="sex">
+      <ion-list-header >
+        <ion-label color="light" style="font-size: 20px;">Select your Sex</ion-label>
+      </ion-list-header>
+      
+      <ion-item class="sex">
+        <ion-label color="light">Male</ion-label>
+        <ion-radio slot="start" value="male" checked></ion-radio>
+      </ion-item>
+      
+      <ion-item class="sex">
+        <ion-label color="light">Female</ion-label>
+        <ion-radio slot="start" value="female"></ion-radio>
+      </ion-item>
+      
+    </ion-radio-group>
+    
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">MCI Number</ion-label>
+    <ion-input type="number" color="light" [(ngModel)]="mci_number"></ion-input>
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">SPECIALIZATION</ion-label>
+    <ion-input type="text" color="light" [(ngModel)]="specialization"></ion-input>
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">CONTACT NO</ion-label>
+    <ion-input type="number" color="light" [(ngModel)]="contactno"></ion-input>
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">ADDRESS  </ion-label>
+    <ion-textarea color="light" type="text" placeholder="Addres goes here...." [(ngModel)]="address"></ion-textarea>
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">PINCODE</ion-label>
+    <ion-input type="number" color="light" [(ngModel)]="pincode"></ion-input>
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">EMAIL ID</ion-label>
+    <ion-input type="email" color="light" [(ngModel)]="email"></ion-input>
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">PASSWORD</ion-label>
+    <ion-input type="password" color="light" [(ngModel)]="password"></ion-input>
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">CONFIRM PASSWORD</ion-label>
+    <ion-input type="password" color="light" [(ngModel)]="confirm_password"></ion-input>
+  </ion-item><br>
+  
+  <ion-label>
+    <ion-title text-center color="light">CLINIC ADDRESS</ion-title>
+  </ion-label>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">CLINIC NAME</ion-label>
+    <ion-input type="text" color="light" [(ngModel)]="clinic_name"></ion-input>
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">ADDRESS  </ion-label>
+    <ion-textarea color="light" type="text" placeholder="Addres goes here...." [(ngModel)]="doc_address"></ion-textarea>
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">PINCODE</ion-label>
+    <ion-input type="number" color="light" [(ngModel)]="doc_pincode"></ion-input>
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">CITY</ion-label>
+    <ion-input type="text" color="light" [(ngModel)]="clinic_city"></ion-input>
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">STATE</ion-label>
+    <ion-input type="text" color="light" [(ngModel)]="clinic_state"></ion-input>
+  </ion-item><br>
+  
+  <ion-button class="next" (click)="next()">NEXT</ion-button>
+  
+</ion-content>

@@ -1,0 +1,137 @@
+<ion-header>
+  <ion-toolbar text-center>
+    <ion-title color="light">FeedBack</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-title text-center color="dark">Please fill the below feedback<br> to the best of your knowledge</ion-title>
+  <br>  
+  <ion-text>Do you feel headache?</ion-text><br>
+  <ion-radio-group [(ngModel)]="headache">      
+    <ion-item>
+      <ion-label color="light">Yes</ion-label>
+      <ion-radio color="secondary" slot="start" value="yes"></ion-radio>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="light">No</ion-label>
+      <ion-radio slot="start" value="no" ></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  
+  <br>
+  <ion-text>do you feel stomachache?</ion-text><br>
+  <ion-radio-group [(ngModel)]="stomachache">      
+    <ion-item>
+      <ion-label color="light">Yes</ion-label>
+      <ion-radio color="secondary" slot="start" value="yes" checked></ion-radio>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="light">No</ion-label>
+      <ion-radio slot="start" value="no"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  
+  <br>
+  <ion-text>Do you feel nauseatic(feeling of vomiting)?</ion-text><br>
+  <ion-radio-group [(ngModel)]="nauseatic">      
+    <ion-item>
+      <ion-label color="light">Yes</ion-label>
+      <ion-radio color="secondary" slot="start" value="yes" checked></ion-radio>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="light">No</ion-label>
+      <ion-radio slot="start" value="no"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  
+  <br>
+  <ion-text>Are you experiencing constipation?</ion-text><br>
+  <ion-radio-group [(ngModel)]="constipation">      
+    <ion-item>
+      <ion-label color="light">Yes</ion-label>
+      <ion-radio color="secondary" slot="start" value="yes"></ion-radio>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="light">No</ion-label>
+      <ion-radio color="tertiary" slot="start" value="no" ></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  
+  <br>
+  <ion-text>Are you experiencing insomnia?</ion-text><br>
+  <ion-radio-group [(ngModel)]="insomnia">      
+    <ion-item>
+      <ion-label color="light">Yes</ion-label>
+      <ion-radio color="secondary" slot="start" value="yes"></ion-radio>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="light">No</ion-label>
+      <ion-radio slot="start" value="no" checked></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  
+  <br>
+  <ion-text>Do you feel fever?</ion-text><br>
+  <ion-radio-group [(ngModel)]="fever">      
+    <ion-item>
+      <ion-label color="light">Yes</ion-label>
+      <ion-radio color="secondary" slot="start" value="yes"></ion-radio>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="light">No</ion-label>
+      <ion-radio slot="start" value="no" checked></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  
+  <br>
+  <ion-text>Are you experiencing diarrhoea(loss of water from body)?</ion-text><br>
+  <ion-radio-group [(ngModel)]="diarrhoea">      
+    <ion-item>
+      <ion-label color="light">Yes</ion-label>
+      <ion-radio color="secondary" slot="start" value="yes"></ion-radio>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="light">No</ion-label>
+      <ion-radio slot="start" value="no" checked></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  
+  <br>
+  <ion-text>Are you experiencing loss in appetite?</ion-text><br>
+  <ion-radio-group [(ngModel)]="appetite">      
+    <ion-item>
+      <ion-label color="light">Yes</ion-label>
+      <ion-radio color="secondary" slot="start" value="yes"></ion-radio>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="light">No</ion-label>
+      <ion-radio slot="start" value="no" checked></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  
+  <br>
+  <ion-text>Are you experiencing anxiety?</ion-text><br>
+  <ion-radio-group [(ngModel)]="anxiety">      
+    <ion-item>
+      <ion-label color="light">Yes</ion-label>
+      <ion-radio color="secondary" slot="start" value="yes"></ion-radio>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="light">No</ion-label>
+      <ion-radio slot="start" value="no" checked></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  
+  
+  <ion-button type="submit" class="submit" (click)="submit()">SUBMIT</ion-button>
+</ion-content>

@@ -1,0 +1,52 @@
+ion-content{
+    --background: #1a64ec;
+}
+a{
+    text-decoration: none;
+    float: right;
+    font-weight: bold;
+    color: black;    
+}
+img{
+    height: 30%;
+    padding-left: 20%;
+}
+.items{
+    height: 10%;
+    --background: rgba(0,0,0,0.5);
+    --border-radius: 10px;
+}
+ion-button{
+    margin-bottom: 5%;
+    height: 8%;    
+    border: 0;
+}
+.login{
+    padding-left: 35%;
+    --background: #fff8f5;
+    color: black;
+    font-weight: bold;
+    height: 5%;
+}
+.register{
+    padding-left: 30%;
+    --background: #fff8f5;
+    color: black;
+    font-weight: bold;   
+    height: 7%;
+}
+.doctor{
+    padding-left: 15%;
+    --background: #fff8f5;
+    color: black;
+    font-weight: bold;   
+    height: 7%;
+}
+.google{
+    --background: #dd4b39;
+    padding-left: 15%;
+    font-weight: bold;
+}
+ion-label{
+    font-weight: bold;
+}

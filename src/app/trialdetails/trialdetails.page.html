@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center color="light">OBESE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+      <img src="../../assets/images/obesity.png">
+  </div><br>
+
+  <ion-label >LAB NAME:</ion-label>
+  <ion-item lines="none">  
+    <ion-input type="text" readonly>{{ labName }}</ion-input>
+  </ion-item><br>
+
+  <ion-label>Medicine Name</ion-label>
+  <ion-item lines="none">  
+    <ion-input type="text" readonly>{{ trialName }}</ion-input>
+  </ion-item><br>
+
+  <ion-label>START DATE:</ion-label>
+  <ion-item lines="none">  
+      <ion-datetime value="2019-03-03" displayFormat="MMM YYYY DD"></ion-datetime>
+  </ion-item><br>
+
+  <ion-label>OBJECTIVE OF THE TRIAL</ion-label>
+  <ion-item lines="none">
+    <ion-textarea type="text" readonly value="To cure People."></ion-textarea>
+  </ion-item><br>
+
+  <ion-label>Age</ion-label>
+  <ion-item lines="none">
+    <ion-textarea type="text" readonly value="20"></ion-textarea>
+  </ion-item><br>
+  
+  <ion-label>Purpose</ion-label>
+  <ion-item lines="none">
+    <ion-textarea type="text" readonly value="Cardiology"></ion-textarea>
+  </ion-item><br>
+
+  <ion-label>Side Effects</ion-label>
+  <ion-item lines="none">
+    <ion-item><ion-input type="text" readonly>Nausea</ion-input><br></ion-item>
+    <ion-item><ion-input type="text" readonly>Vomiting</ion-input></ion-item>
+  </ion-item><br>
+
+  <ion-grid>
+      <ion-row>
+        <ion-col offset="4">
+          <ion-button float-center clear small (click)="apply()">APPLY</ion-button>  
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>

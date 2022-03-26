@@ -1,0 +1,25 @@
+ion-toolbar{
+    --background: #1f3a93;    
+}
+ion-content{
+    --background: linear-gradient(to top, #19b5fe 40%, #1f3a93 100%);
+}
+ion-title{
+    font-weight: bold;
+}
+.title{
+    font-weight: inherit;
+    font-size: 15px;
+}
+.subtitle{
+    font-weight: bold;
+    color: black;    
+}
+.card1{    
+    --background: #c5eff7;
+}
+ion-card-header{       
+    font-weight: bold;
+    color: black;   
+    text-transform: uppercase;
+}

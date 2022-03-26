@@ -1,0 +1,32 @@
+<ion-content padding mode="md"> 
+  <br>
+  <a routerLink="/home">SKIP</a>
+  <br>
+  <img src="../../assets/images/New Logo1.png">
+
+<ion-item class="items" lines="none">
+  <ion-label position="floating" color="light">Username</ion-label>
+  <ion-input clear-input="true" type="text" [(ngModel)]="username" color="light"></ion-input>
+</ion-item>
+<br>
+<ion-item class="items" lines="none">
+  <ion-label position="floating" color="light ">Password</ion-label>
+  <ion-input clear-input="true" type="password" [(ngModel)]="password"  color="light"></ion-input>
+</ion-item>
+<br>
+
+<ion-button class="login" (click)="login()">Login</ion-button>
+<br>
+<ion-button class="register" (click)="register()"> REGISTER</ion-button>
+<br>
+<ion-button class="doctor" (click)="doctorlogin()"> Login As Doctor</ion-button>
+
+<div *ngIf="(user | async) || {} as user">
+  <ion-button class="google" *ngIf="!user.uid" (click)="googleLogin()"><ion-icon slot="start" name="logo-google"></ion-icon>
+    Signin with Google
+  </ion-button><br>
+  <div *ngIf="user.uid"><ion-button (click)="signOut()">Sign Out</ion-button></div>
+</div>
+
+
+</ion-content>

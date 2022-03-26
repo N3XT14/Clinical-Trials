@@ -1,0 +1,26 @@
+ion-title{
+    font-weight: bold;
+    justify-self: center;    
+}
+ion-toolbar{
+    --background: #1f3a93;
+}
+ion-content{
+    --background: #89c4f4;
+}
+.card1{    
+    --background: #c5eff7;
+    box-shadow: 2px 5px #373737;
+}
+.card2{
+    --background: #81cfe0;
+    box-shadow: 2px 5px #c5c0bd;
+}
+ion-card-header{       
+    font-weight: bold;
+    color: black;   
+    text-transform: uppercase;
+}
+div{
+    border-top: 2px solid black;
+}

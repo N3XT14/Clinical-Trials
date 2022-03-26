@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>    
+  <ion-title text-center color="light">PROFILE
+  </ion-title>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="card1" color="light">
+        <ion-card-header> PROFILE : </ion-card-header>         
+        <ion-card-content>      
+          <div>
+            <ion-button size="small" (click)="updateprofile()"><ion-icon slot="end" name="arrow-round-forward"></ion-icon>UPDATE YOUR PROFILE</ion-button>
+          </div>        
+        </ion-card-content>        
+    </ion-card>
+
+    <ion-card  class="card2" color="light">
+        <ion-card-header> MEDICAL HISTORY : </ion-card-header>         
+        <ion-card-content>      
+          <div>
+            <ion-button size="small" (click)="updatemedicalhistory()"><ion-icon slot="end" name="arrow-round-forward"></ion-icon>UPDATE YOUR MEDICAL HISTORY</ion-button>
+          </div>        
+        </ion-card-content>        
+    </ion-card>
+
+    <ion-card class="card2"  color="light">
+        <ion-card-header> ON-GOING TRIALS : </ion-card-header>         
+        <ion-card-content>      
+          <div>
+            <ion-button size="small" (click)="ongoing()"><ion-icon slot="end" name="arrow-round-forward"></ion-icon>VIEW ON-GOING TRIALS</ion-button>
+          </div>        
+        </ion-card-content>        
+    </ion-card>
+    
+    <ion-card class="card2"  color="light">
+      <ion-card-header>TRIAL HISTORY : </ion-card-header>         
+      <ion-card-content>      
+        <div>
+          <ion-button size="small" (click)="prev()"><ion-icon slot="end" name="arrow-round-forward"></ion-icon>VIEW PREVIOUS TRIALS</ion-button>
+        </div>        
+      </ion-card-content>        
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,24 @@
+ion-toolbar{
+    --background: #1f3a93;
+}
+ion-content{
+    --background: #19b5fe;
+}
+ion-title{
+    font-weight: bold;
+}
+ion-item{
+    --background: rgba(0,0,0,0.3);
+    --border-radius: 20px;
+}
+ion-text{
+    font-size: 15px;
+    font-weight: bolder;
+    color: #373737;    
+}
+.submit{
+    padding-left: 35%;
+    --background: #fff8f5;
+    color: black;
+    font-weight: bold;
+}

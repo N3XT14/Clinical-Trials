@@ -1,0 +1,28 @@
+ion-toolbar{
+    --background: #1f3a93;
+}
+ion-content{
+    --background: #19b5fe;
+}
+ion-item{
+    --background: rgba(0,0,0,0.3);
+    --border-radius: 10px;
+}
+.sex{
+    --background: rgba(0,0,0,0);
+    font-size: 15px;
+}
+.age_group{
+    --background: rgba(0,0,0,0);
+    font-size: 15px;
+}
+.upload{
+    color: black;
+    font-weight: bold;
+}
+.next{
+    padding-left: 35%;
+    --background: #fff8f5;
+    color: black;
+    font-weight: bold;
+}

@@ -1,0 +1,36 @@
+ion-toolbar{
+    --background: rgba(82, 179, 217, 1);
+}
+ion-title{
+    font-weight: bold;
+}
+ion-content{
+    --background: linear-gradient(to bottom,#00C9FF 0%, #92FE9D 100%);
+}
+ion-card{
+    color: #ffffff;
+}
+ion-row{
+    border-top: 2px solid black;    
+}
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+ion-textarea{
+    --background:rgba(197, 239, 247, 0.3); 
+}
+.tag {
+    float: left;
+    position: absolute;
+    font-weight: bold;
+    padding-top: 20%;
+    color: black;
+ }
+ u{
+     font-weight: bold;
+     font-size: 17px;
+     color: #775544;
+ }
+ a{
+     font-weight: bold;
+ }

@@ -1,0 +1,37 @@
+.register{
+    z-index: 1;
+    position: fixed;
+    left: 0%;
+    right: 5%;
+    bottom: 0%;
+    height: 50px;
+    --background: linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0.5), rgba(0,0,0,0.8), rgba(0,0,0,1));
+    font-weight: bold;
+    color: white;
+}
+ion-content{    
+    --background: linear-gradient(to bottom, #fc354c 0%, #0abfbc 100%);
+}
+ion-toolbar{
+    --background: #db0a5b;
+}
+ion-card{
+    --background: #ffffff;
+}
+img{
+    --background: 100%;
+}
+ion-card-header{       
+    font-weight: bold;
+    color: black;   
+}
+.subtitle{
+    font-weight: bold;
+    color: black;    
+}
+p{
+    font-weight: bold;
+}
+button{
+    position: fixed;
+}

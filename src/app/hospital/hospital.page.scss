@@ -1,0 +1,21 @@
+ion-toolbar{
+    --background: #1f3a93;    
+}
+ion-content{
+    --background: linear-gradient(to top, #19b5fe 40%, #1f3a93 100%);
+}
+ion-title{
+    font-weight: bold;
+}
+ion-content{
+    --background: rgba(197, 239, 247, 1);
+}
+ion-item{
+    --background: rgba(0,0,0,0.0);
+    --border-radius: 10px;
+}
+ion-label{
+    font-weight: bold;
+    font-size: 20px;
+    color: #373737;
+}

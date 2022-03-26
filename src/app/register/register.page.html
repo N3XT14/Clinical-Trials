@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar text-center>
+    <ion-title color="light">REGISTRATION</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">FULL NAME</ion-label>
+    <ion-input type="text" color="light" [(ngModel)]="fullname"></ion-input>
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-label color="light">DATE OF BIRTH</ion-label>
+    <ion-datetime value="2019-01-01" [(ngModel)]="dob" displayFormat="DD MMM YYYY"></ion-datetime>
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-radio-group [(ngModel)]="gender">
+      <ion-list-header>
+        <ion-label color="light" style="font-size: 20px;">Select your Sex</ion-label>
+      </ion-list-header>
+      
+      <ion-item class="sex">
+        <ion-label color="light">Male</ion-label>
+        <ion-radio slot="start" value="male" checked></ion-radio>
+      </ion-item>
+      
+      <ion-item class="sex">
+        <ion-label color="light">Female</ion-label>
+        <ion-radio slot="start" value="female"></ion-radio>
+      </ion-item>
+      
+      <ion-item class="sex">
+        <ion-label color="light">Other</ion-label>
+        <ion-radio slot="start" value="transgender"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    
+  </ion-item><br>
+
+  <ion-item>
+    <ion-radio-group [(ngModel)]="age">
+      <ion-list-header>
+        <ion-label color="light" style="font-size: 20px;">Select your Age Group</ion-label>
+      </ion-list-header>
+      
+      <ion-item class="age_group">
+        <ion-label color="light">0-17</ion-label>
+        <ion-radio slot="start" value="child" checked></ion-radio>
+      </ion-item>
+      
+      <ion-item class="age_group">
+        <ion-label color="light">18-64</ion-label>
+        <ion-radio slot="start" value="adult"></ion-radio>
+      </ion-item>
+      
+      <ion-item class="age_group">
+        <ion-label color="light">65+</ion-label>
+        <ion-radio slot="start" value="old"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">CONTACT NO</ion-label>
+    <ion-input type="number" color="light" max="10" [(ngModel)]="contactno"></ion-input>
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">ADDRESS  </ion-label>
+    <ion-textarea color="light" type="text" placeholder="Addres goes here...." [(ngModel)]="address"></ion-textarea>
+  </ion-item><br>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">PINCODE</ion-label>
+    <ion-input type="number" color="light" [(ngModel)]="pincode"></ion-input>
+  </ion-item><br>
+  
+  <ion-button class="next" (click)="next()">NEXT</ion-button>
+  
+</ion-content>

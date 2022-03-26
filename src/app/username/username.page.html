@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>        
+    <br>
+    <img src="../../assets/images/New Logo1.png">
+
+  <ion-item class="items" lines="none">
+    <ion-label position="floating" color="light"></ion-label>
+    <ion-input clear-input="true" type="text" [(ngModel)]="username" color="light" readonly >{{ fullname }}</ion-input>
+  </ion-item>
+  <br>
+
+  <ion-item class="items" lines="none">
+    <ion-label position="floating" color="light">Password</ion-label>
+    <ion-input clear-input="true" type="password" [(ngModel)]="password" color="light"></ion-input>
+  </ion-item>
+  <br>
+
+  <ion-item class="items" lines="none">
+    <ion-label position="floating" color="light">Confirm Password</ion-label>
+    <ion-input clear-input="true" type="password" [(ngModel)]="confirm_password" color="light"></ion-input>
+  </ion-item>
+  <br>
+  <br>
+  <ion-button (click)="next()">Register</ion-button>
+  <br>
+  <!-- <div>
+    <iframe src="https://www.google.com/maps/place/Welingkar+Institute+of+Management+Development+%26+Research/@19.0251791,72.8481356,17z/data=!3m1!4b1!4m5!3m4!1s0x3be7ced7f4386195:0xa7fea98c278939c6!8m2!3d19.0251791!4d72.8503243"></iframe>
+  </div> -->
+</ion-content>
