@@ -1,0 +1,47 @@
+h1
+{
+	margin: 0px;
+}
+fieldset
+{
+	width: 90%;
+	margin: 10px auto;
+}
+legend
+{
+	padding:0px 5px;
+	font-size: 20px;
+}
+table td
+{
+	white-space: nowrap;
+}
+table td:last-child
+{
+    width: 100%;
+}
+label
+{
+	float: left;
+}
+input
+{
+    width: 100%;
+	border: none;
+	border-bottom:1px solid grey;
+	background: transparent;
+	outline: none;
+	height: 30px;
+	font-size:16px;
+	padding-top: 4px;
+}
+input:focus
+{
+	border-bottom:1px solid black;
+}
+#add_trial
+{
+	width: 100px;
+	padding: 3px 8px;
+	margin-left: 45%;
+}

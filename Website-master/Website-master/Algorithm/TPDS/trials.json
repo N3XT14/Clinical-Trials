@@ -1,0 +1,74 @@
+[
+  {
+  "purpose":"cardiology",
+  "age":"adult",
+  "trial_no":20,
+  "patient_no":500,
+  "success_rate":65,
+  "preference": 0 
+},
+{
+  "purpose":"thyroid",
+  "age":"old",
+  "trial_no":18,
+  "patient_no":600,  
+  "success_rate":70,
+  "preference": 0
+},
+{
+  "purpose":"diabetes",
+  "age":"adult",
+  "trial_no":7,
+  "patient_no":200,  
+  "success_rate":85,
+  "preference": 0
+},
+{
+  "purpose":"diabetes",
+  "age":"old",
+  "trial_no":10,
+  "patient_no":250,  
+  "success_rate":70,
+  "preference": 0
+},
+{
+  "purpose":"cardiology",
+  "age":"old",
+  "trial_no":11,
+  "patient_no":250,
+  "success_rate":60,
+  "preference": 0
+},
+{
+  "purpose":"cardiology",
+  "age":"child",
+  "trial_no":14,
+  "patient_no":124,  
+  "success_rate":50,
+  "preference": 0
+},
+{
+  "purpose":"thyroid",
+  "age":"adult",
+  "trial_no":3,
+  "patient_no":345,  
+  "success_rate":74,
+  "preference": 0
+},
+{
+  "purpose":"thyroid",
+  "age":"adult",
+  "trial_no":7,
+  "patient_no":400,  
+  "success_rate":69,
+  "preference": 0
+},
+{
+  "purpose":"thyroid",
+  "age":"old",
+  "trial_no":8,
+  "patient_no":700,
+  "success_rate":80,
+  "preference": 0
+}
+]

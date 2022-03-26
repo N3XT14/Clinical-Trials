@@ -1,0 +1,40 @@
+#container
+{
+	background-color: #1a64ec;
+}
+#container button
+{
+	margin: 10px;
+	padding: 2px 8px;
+	border-radius: 5px;
+	background-color: #134bb1;
+	color: #fff8f5;
+}
+#trialinfo div
+{
+	display: inline-block;
+	margin: 10px;
+	padding: 5px;
+	border-radius: 20px;
+	border: 1px solid black;
+	box-shadow: 5px 5px;
+}
+
+#phases div
+{
+	margin:5px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #34495e;
+	color:white;
+	display:inline-block;
+	float:left;
+}
+
+#phases button
+{
+	border-radius: 10px;
+	background-color: lightblue;
+	padding: 2px 15px;
+	border: none;
+}
